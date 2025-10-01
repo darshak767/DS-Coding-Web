@@ -16,9 +16,10 @@
 
     <title>DS Coding</title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
+    <!-- Font awasome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
@@ -36,7 +37,24 @@
     <header class="nav-bar grid">
         <h2 class="sm-heading"><a href="#hero">DS Coding</a></h2>
         <nav>
-            <ul class="nav_links">
+            <ul class="nav_links grid">
+                <li><a href="#modules">Modules</a></li>
+                <li><a href="#practice">Practice</a></li>
+                <li><a href="#progress">Progress</a></li>
+                <li><a href="#faq">Faq</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <i class="fa-solid fa-gear side-menu"></i>
+    </header>
+
+
+    <!-- Sidebar -->
+    <div class="side-bar">
+        <i class="fa-solid fa-square-xmark close"></i>
+        <h2 class="sm-heading"><a href="#hero">DS Coding</a></h2>
+        <nav>
+            <ul>
                 <li><a href="#modules">Modules</a></li>
                 <li><a href="#practice">Practice</a></li>
                 <li><a href="#progress">Progress</a></li>
@@ -44,9 +62,8 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <a href="#" class="big-btn">Start Free Lesson</a>
-    </header>
-
+        <i class="fa-solid fa-moon bg_changer"></i>
+    </div>
 
     <main>
         <!-- Hero section -->
@@ -69,9 +86,9 @@
                     <a href="https://www.google.com/" class="big-btn">Explore Modules</a>
                 </div>
                 <div class="hero-first-sticker flex-class">
-                    <p class="sticker-items">💀 Visual intuition</p>
-                    <p class="sticker-items">😎 Structured curriculum</p>
-                    <p class="sticker-items">🪙 Measurable progress</p>
+                    <p class="sticker-items"><i class="fa-solid fa-face-smile-wink"></i> Visual intuition</p>
+                    <p class="sticker-items"><i class="fa-solid fa-sack-dollar"></i> Structured curriculum</p>
+                    <p class="sticker-items"><i class="fa-solid fa-building-columns"></i> Measurable progress</p>
                 </div>
             </div>
 
@@ -289,7 +306,7 @@
                     Ahmedabad, India</div>
             </div>
 
-            <form action="#" method="post" class="inquary-form grid">
+            <form action="#" method="post" class="inquiry-form grid">
                 <div class="field">
                     <label for="name">Your Name</label>
                     <input type="text" placeholder="name" id="name" name="name" required>
@@ -330,6 +347,9 @@
             <button type="button" class="big-btn">Join</button>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="gsap.js"></script>
     <script src="script.js"></script>
 </body>
 
