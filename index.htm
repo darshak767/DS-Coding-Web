@@ -16,20 +16,18 @@
 
     <title>DS Coding</title>
 
-    <!-- Font awasome -->
+    <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preload" href="style.css" as="style" />
 
-    <!-- Preload important assets -->
-    <link rel="preload" href="style.css" as="style">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-
-    <!-- Example Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -40,7 +38,6 @@
             <ul class="nav_links grid">
                 <li><a href="#modules">Modules</a></li>
                 <li><a href="#practice">Practice</a></li>
-                <li><a href="#progress">Progress</a></li>
                 <li><a href="#faq">Faq</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -48,16 +45,14 @@
         <i class="fa-solid fa-gear side-menu"></i>
     </header>
 
-
     <!-- Sidebar -->
-    <div class="side-bar">
+    <div class="side-bar grid">
         <i class="fa-solid fa-square-xmark close"></i>
         <h2 class="sm-heading"><a href="#hero">DS Coding</a></h2>
         <nav>
             <ul>
                 <li><a href="#modules">Modules</a></li>
                 <li><a href="#practice">Practice</a></li>
-                <li><a href="#progress">Progress</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -66,23 +61,21 @@
     </div>
 
     <main>
-        <!-- Hero section -->
+        <!-- Hero Section -->
         <section class="hero section grid grid-two-row" id="hero">
             <div class="hero-first">
                 <h1 class="hero-heading">Master Data Structures with Animation-first Learning.</h1>
                 <div class="sm-text">Learn the time-tested fundamentals the classic way — step-by-step, proofs where
-                    they matter, and hand-picked problems — enhanced with modern, interactive visuals.
-                </div>
+                    they matter, and hand-picked problems — enhanced with modern, interactive visuals.</div>
                 <div class="hero-first-items-4 flex-class">
-                    <button type="button" value="Classic Patterns" class="sm-btn">Classic
-                        Patterns</button>
-                    <button type="button" value="100+ Problems" class="sm-btn">100+
-                        Problems</button>
+                    <button type="button" value="Classic Patterns" class="sm-btn">Classic Patterns</button>
+                    <button type="button" value="100+ Problems" class="sm-btn">100+ Problems</button>
                     <button type="button" value="Project-led learning" class="sm-btn">Project-led</button>
                     <button type="button" value="Interview-ready" class="sm-btn">Interview-ready</button>
                 </div>
                 <div class="hero-first-items-2">
-                    <a href="https://www.google.com/" class="big-btn">Join the Course</a>
+                    <a href="mailto:darshak767@gmail.com?subject=Join%20the%20Course&body=Hello%20Darshak,"
+                        class="big-btn">Join the Course</a>
                     <a href="https://www.google.com/" class="big-btn">Explore Modules</a>
                 </div>
                 <div class="hero-first-sticker flex-class">
@@ -94,8 +87,8 @@
 
             <div class="hero-second">
                 <div class="hero-second-inside grid grid-two-row">
-                    <div class="hero-second-cards ">
-                        <h3 class="sm-heading ">Searching & Sorting</h3>
+                    <div class="hero-second-cards">
+                        <h3 class="sm-heading">Searching & Sorting</h3>
                         <ul>
                             <li>Binary Search</li>
                             <li>Merge Sort</li>
@@ -103,7 +96,7 @@
                         </ul>
                     </div>
                     <div class="hero-second-cards">
-                        <h3 class="sm-heading "> Arrays & Strings</h3>
+                        <h3 class="sm-heading">Arrays & Strings</h3>
                         <ul>
                             <li>Two pointers</li>
                             <li>Sliding window</li>
@@ -129,6 +122,7 @@
                 </div>
             </div>
         </section>
+
 
         <!-- Modules section -->
         <section class="modules section" id="modules">
@@ -203,7 +197,6 @@
                     <button class="sm-btn">Editorials</button>
                     <button class="sm-btn">Video Hints</button>
                 </div>
-                <button type="button" class="big-btn">Try a free set</button>
             </div>
 
             <div class="code-card hero-second-cards">
@@ -232,11 +225,7 @@
                         <li>b</li>
                     </ul>
                 </div>
-
-                <div class="btns">
-                    <button type="button" class="big-btn">Play</button>
-                    <button type="button" class="sm-btn">Reset</button>
-                </div>
+                <br><br>
                 <div class="sm-text">No signup required. We’ll open an interactive notebook with step‑by‑step animations
                     explaining classic problems like Two Sum, Valid Parentheses, and more.</div>
             </div>
@@ -306,27 +295,29 @@
                     Ahmedabad, India</div>
             </div>
 
-            <form action="#" method="post" class="inquiry-form grid">
+            <form id="contact-form" class="inquiry-form grid">
                 <div class="field">
                     <label for="name">Your Name</label>
                     <input type="text" placeholder="name" id="name" name="name" required>
                 </div>
                 <div class="field">
-                    <label for="email">Email :-</label>
+                    <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="field">
-                    <label for="message">Message :-</label>
-                    <textarea name="message" id="message" rows="5" placeholder="Wirte Your message here..."></textarea>
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="5" placeholder="Write your message here..."
+                        required></textarea>
                 </div>
-                <button type="submit" class="big-btn">Open free lesson</button>
+                <button type="submit" class="big-btn">Send Message</button>
             </form>
-        </section>
 
+
+        </section>
     </main>
 
     <!-- footer section -->
-    <footer class="footer section flex-class">
+   <footer class="footer section flex-class">
         <div class="footer-first">
             <span class="logo sm-heading">👨‍💻DS Coding</span>
             <p class="sm-text">© 2025 DS Coding. All rights reserved.</p>
@@ -335,7 +326,6 @@
             <ul class="flex-class">
                 <li><a href="#modules">Syllabus</a></li>
                 <li><a href="#practice">Practice</a></li>
-                <li><a href="#progress">Progress</a></li>
                 <li><a href="#faq">Faq</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -344,9 +334,18 @@
             <div class="field">
                 <input type="text" placeholder="example@gmail.com">
             </div>
-            <button type="button" class="big-btn">Join</button>
+            <a href="http://google.com" class="big-btn" role="button">join</a>
         </div>
     </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("mZDxpEDT8UVC3_ClH"); // Replace with your EmailJS Public Key
+        })();
+    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="gsap.js"></script>

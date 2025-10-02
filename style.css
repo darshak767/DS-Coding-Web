@@ -7,98 +7,80 @@
 
 :root {
     /* Core Backgrounds */
-    --bg: #000000;
-    /* pure black */
-    --surface: rgba(20, 20, 20, 0.9);
-    /* glassy dark card */
-    --surface-alt: rgba(35, 35, 35, 0.85);
+    --bg: #f5f5f7;
+    /* soft light gray background */
+    --surface: #ffffff;
+    /* white cards */
+    --surface-alt: #f0f0f3;
+    /* slightly darker cards */
 
     /* Text */
-    --ink: #ffffff;
-    /* pure white headings */
-    --muted: #d1d5db;
+    --ink: #1f1f1f;
+    /* almost black text */
+    --white: #ffffff;
+    /* dark text */
+    --muted: #4b5563;
     /* soft gray body text */
-    --highlight: #e5e7eb;
-    /* slightly brighter text highlight */
+    --highlight: #111827;
+    /* dark heading highlights */
 
-    /* Brand Gradient (glow effect) */
-    --brandA: #8b5cf6;
-    /* purple */
-    --brandB: #06b6d4;
-    /* cyan */
-    --brandC: #3b82f6;
+    /* Brand Gradient */
+    --brandA: #6366f1;
+    /* indigo */
+    --brandB: #3b82f6;
     /* blue */
+    --brandC: #06b6d4;
+    /* cyan */
 
     /* Action / Alerts */
     --success: #22c55e;
-    /* neon green */
     --warning: #f59e0b;
-    /* amber */
     --danger: #ef4444;
-    /* red */
 
     /* Effects */
-    --ring: 0 0 15px rgba(6, 182, 212, 0.6);
-    --ring-strong: 0 0 25px rgba(139, 92, 246, 0.8);
-    --shadow: 0 8px 32px rgba(0, 0, 0, 0.85);
-    --radius: 16px;
+    --ring: 0 0 15px rgba(99, 102, 241, 0.4);
+    --ring-strong: 0 0 25px rgba(59, 130, 246, 0.5);
 
     /* Buttons */
-    --sm-btn: rgba(55, 65, 81, 0.9);
-} 
+    --sm-btn: #334443;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
 
-.dark{
-    /* Core Backgrounds */
-    --bg: #ffffff; 
-    /* pure white */
-    --surface: rgba(255, 255, 255, 0.9); 
-    /* glassy light card */
-    --surface-alt: rgba(245, 245, 245, 0.85); 
-    /* subtle light gray */
-
-    /* Text */
-    --ink: #000000; 
-    /* pure black headings */
-    --muted: #4b5563; 
-    /* soft dark gray body text */
-    --highlight: #111827; 
-    /* near-black for emphasis */
-
-    /* Brand Gradient (glow effect stays same) */
-    --brandA: #8b5cf6; 
-    /* purple */
-    --brandB: #06b6d4; 
-    /* cyan */
-    --brandC: #3b82f6; 
-    /* blue */
-
-    /* Action / Alerts */
-    --success: #16a34a; 
-    /* deep green */
-    --warning: #d97706; 
-    /* warm amber */
-    --danger: #dc2626; 
-    /* strong red */
-
-    /* Effects */
-    --ring: 0 0 10px rgba(6, 182, 212, 0.3); 
-    --ring-strong: 0 0 20px rgba(139, 92, 246, 0.5);
-    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
-    --radius: 16px;
-
-    /* Buttons */
-    --sm-btn: rgba(243, 244, 246, 0.9); 
-    /* light gray button bg */
+.dark {
+    --bg: #18181b;
+    --surface: #1f1f23;
+    --surface-alt: #27272a;
+    --ink: #f5f5f7;
+    --white: #ffffff;
+    --muted: #d1d5db;
+    --highlight: #ffffff;
 }
 
 
+/* Root font scaling for mobile + tablet */
 html {
     font-size: 62.5%;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* 1rem = 10px base */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: var(--bg);
     color: var(--muted);
     scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 70%;
+    }
+
+    /* 1rem ~ 11.2px */
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 75%;
+    }
+
+    /* 1rem = 12px */
 }
 
 body {
@@ -140,27 +122,28 @@ a {
     color: var(--ink);
 }
 
-a:hover{
+a:hover {
     color: var(--success);
 }
 
 .height {
-    min-height: 100vh
+    min-height: 100vh;
 }
 
+/* Updated font sizes */
 .big-heading {
     font-weight: 600;
-    font-size: clamp(1.2rem, calc(3.9vw + 1rem), 3rem);
+    font-size: clamp(2rem, 4vw + 1rem, 4.2rem);
     color: var(--ink);
 }
 
 .sm-heading {
-    font-size: clamp(.6rem, 2vw, 1.8rem);
+    font-size: clamp(1.4rem, 2.5vw, 2.4rem);
     color: var(--highlight);
 }
 
 .sm-text {
-    font-size: clamp(1rem, calc(.6vw + 1rem), 2rem);
+    font-size: clamp(1.4rem, 1.5vw + 1rem, 2.2rem);
     font-weight: 100;
     color: var(--muted);
 }
@@ -169,18 +152,21 @@ a:hover{
     padding: 1rem;
     border: none;
     border-radius: 3rem;
-    background: linear-gradient(135deg, var(--brandA), var(--brandB), var(--brandC));
+    background: linear-gradient(135deg, #3b82f6, #2563eb, #1e40af);
+    /* Blue gradient */
     cursor: pointer;
-    font-size: clamp(.5rem, calc(2vw - .7rem), 2rem);
-    color: var(--ink);
+    font-size: clamp(1.4rem, 1.5vw, 2rem);
+    color: #ffffff;
+    /* White text */
     font-weight: 700;
-    box-shadow: var(--ring-strong);
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
+    /* matching shadow */
     transition: transform .2s ease, box-shadow .3s ease;
 }
 
 .big-btn:hover {
     transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 0 25px rgba(6, 182, 212, 0.9);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
 }
 
 .sm-btn {
@@ -188,19 +174,17 @@ a:hover{
     padding: .8rem;
     border: none;
     border-radius: 1.3rem;
-    color: var(--ink);
+    color: var(--white);
     background-color: var(--sm-btn);
     cursor: pointer;
-    font-size: clamp(.5rem, 1vw, 2rem);
-    font-weight: 550;
+    font-size: clamp(1.2rem, 1vw + .2rem, 1.8rem);
+    font-weight: 500;
     flex: 1 0 .3rem;
 }
 
-
-
 /*********************************************************************/
 
-/* ************************One property to many classes************* */
+/* **********************Sections common spacing********************** */
 .hero,
 .modules,
 .practice,
@@ -211,8 +195,7 @@ a:hover{
     margin: 0 calc(2vw + 2rem);
 }
 
-
-.fa-solid{
+.fa-solid {
     font-size: 2rem;
 }
 
@@ -263,38 +246,43 @@ a:hover{
 
 /* ************************************************************* */
 /* *************************Side bar**************************** */
-.side-bar{
+/* Sidebar default hidden off-screen */
+.side-bar {
     position: fixed;
-    background-color: var(--bg);
-    height: 100vh;
-    width: 21rem;
-    top: 0;
-    right: 1rem;
-    display: none;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    font-size: clamp(.5rem, calc(1.1vw + .5rem), 3rem);
-    padding: 2rem 1.5rem;
-    z-index: 1000;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: var(--surface);
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    z-index: 999;
+    box-shadow: var(--shadow);
 }
 
-img{
-    width: 2rem;
-    height: 2rem;
+.side-bar.active {
+    transform: translateX(0);
+}
+
+img {
+    width: 100%;
+    height: 100%;
     padding: .5rem;
-    background: cover;
-    background-repeat: no-repeat;
+    background-size: cover;
     background-color: white;
 }
 
-.bg_changer{
+.bg_changer {
     cursor: pointer;
     padding: .5rem 1rem;
     border-radius: 1.3rem;
-    color: var(--ink);
+    color: #e1c5c5;
+    background-color: #1f1f23;
     box-shadow: var(--ring);
 }
+
 
 /* ************************************************************* */
 /* ********************Hero Section***************************** */
@@ -309,12 +297,12 @@ img{
 }
 
 .hero-first-items-2 .big-btn {
-    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-size: clamp(1.6rem, 1.5vw, 2rem);
 }
 
 .hero-heading {
     font-weight: 800;
-    font-size: clamp(1.2rem, 4vw, 4.3rem);
+    font-size: clamp(2.2rem, 4vw, 4.5rem);
     color: var(--ink);
 }
 
@@ -326,12 +314,12 @@ img{
 .hero-first-sticker {
     justify-content: start;
     gap: 1.1rem;
-    font-size: clamp(.5rem, calc(1vw + .2rem), 3rem);
+    font-size: clamp(1.2rem, 1vw + .5rem, 2.2rem);
     color: var(--muted);
 }
 
 .hero-second-inside {
-    background: linear-gradient(40deg, var(--brandA), var(--brandB), var(--brandC), transparent);
+    background-color: #34656D;
     box-shadow: var(--ring);
     aspect-ratio: 16/9;
     gap: .5rem;
@@ -344,7 +332,7 @@ img{
     flex-wrap: wrap;
     background: var(--surface);
     border-radius: .8rem;
-    font-size: clamp(.5rem, calc(1.1vw + .2rem), 3rem);
+    font-size: clamp(1.2rem, calc(1.1vw + .2rem), 3rem);
     color: var(--ink);
     box-shadow: var(--shadow);
 }
@@ -356,7 +344,6 @@ img{
 }
 
 /* ************************************************************* */
-
 /* ****************************Modules ************************** */
 .modules-inside {
     gap: 2rem;
@@ -369,7 +356,6 @@ img{
 }
 
 /* ************************************************************* */
-
 /* *************************Practice section******************** */
 .practice {
     flex-wrap: wrap;
@@ -405,7 +391,6 @@ img{
 }
 
 /* ************************************************************* */
-
 /* ********************Trial Section**************************  */
 .trial>.code-card {
     background: var(--surface-alt);
@@ -424,10 +409,6 @@ img{
     background: var(--surface);
 }
 
-.btns>.sm-btn {
-    color: var(--ink);
-}
-
 .trial-cards>ul>li {
     margin: 0;
     padding: 0.5rem 1rem;
@@ -442,14 +423,12 @@ img{
 }
 
 /* ************************************************************* */
-
 /* *************************FAQ Section**************************  */
 .faq>.hero-second-cards {
     box-shadow: var(--ring);
 }
 
 /* ************************************************************* */
-
 /* ********************Contact section************************* */
 .contact {
     margin-bottom: 5rem;
@@ -457,7 +436,7 @@ img{
 
 .inquiry-form {
     background: var(--surface);
-    font-size: clamp(.5rem, calc(1.5vw + .2rem), 3rem);
+    font-size: clamp(1.2rem, calc(1.5vw + .2rem), 3rem);
     color: var(--ink);
     border: 2px solid var(--brandB);
     border-radius: 1rem;
@@ -473,7 +452,7 @@ img{
 .field>input,
 .field>textarea {
     padding: .9rem;
-    font-size: clamp(.5rem, calc(1.1vw + .2rem), 3rem);
+    font-size: clamp(1.2rem, calc(1.1vw + .2rem), 3rem);
     background: var(--surface-alt);
     color: var(--ink);
     border: 1px solid var(--muted);
@@ -481,7 +460,7 @@ img{
 }
 
 .inquiry-form>.big-btn {
-    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-size: clamp(1.4rem, 1.5vw, 2rem);
 }
 
 @media (max-width: 600px) {
@@ -491,7 +470,6 @@ img{
 }
 
 /* ************************************************************* */
-
 /* ******************footer section ************************* */
 .footer {
     border-top: 2px solid var(--brandC);
@@ -507,7 +485,7 @@ img{
 
 ul {
     list-style: none;
-    font-size: clamp(.5rem, calc(1.1vw + .2rem), 3rem);
+    font-size: clamp(1.2rem, calc(1.1vw + .2rem), 3rem);
     color: var(--muted);
 }
 
